@@ -1,2 +1,4 @@
 lsd_slam_core/bin/*
 lsd_slam_core/lib/*
+MobileLSD/opencv2.framework/
+

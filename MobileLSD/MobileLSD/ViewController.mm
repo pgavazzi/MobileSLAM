@@ -41,8 +41,8 @@
 
 @synthesize videoCamera;
 
-- (void) getK(Sophus::Matrix3f& K){
-	% calibrated for iPad2
+- (void) getK:(Sophus::Matrix3f&)K{
+	// calibrated for iPad2
     float fx = 1.1816992757731507e+03;
     float fy = 3.3214250594664935e+02;
     float cx = 0;
@@ -110,7 +110,7 @@
     
     runningIdx_ = 0;
     Sophus::Matrix3f K;
-	getK(K);
+	[self getK:K];
     system_ = new lsd_slam::SlamSystem(cam_width, cam_height, K);
     count_ = 0;
     displayImage = cv::Mat(cam_height, cam_width*2, CV_8UC3);
@@ -125,7 +125,7 @@
     scaleView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"scalebar.png"]];
     
     [self.view addSubview:scaleView];
-	curr_time_ = cv::getTickcount();
+	curr_time_ = cv::getTickCount();
 	max_fps_ = 0;
 	avg_fps_ = 0;
 	skip_frame_ = 20;
@@ -209,7 +209,7 @@
     // Have to do this so as to communicate with the main thread
     // to update the text display
     dispatch_sync(dispatch_get_main_queue(), ^{
-        fpsView_.text = fps_NSStr;
+        self->fpsView_.text = fps_NSStr;
     });
 
     fps_NSStr = [NSString stringWithFormat:@"AVG FPS = %2.2f", avg_fps_];
@@ -217,13 +217,13 @@
     // Have to do this so as to communicate with the main thread
     // to update the text display
     dispatch_sync(dispatch_get_main_queue(), ^{
-        avgfpsView_.text = fps_NSStr;
+        self->avgfpsView_.text = fps_NSStr;
     });
 
     fps_NSStr = [NSString stringWithFormat:@"Camera Center X:%2.2f  Y:%2.2f  Z:%2.2f",transmat(0),transmat(1),transmat(2)];
     
     dispatch_sync(dispatch_get_main_queue(), ^{
-        translation_.text = fps_NSStr;
+        self->translation_.text = fps_NSStr;
     });
 }
 

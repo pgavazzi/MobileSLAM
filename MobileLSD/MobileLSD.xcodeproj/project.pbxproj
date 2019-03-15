@@ -13,7 +13,6 @@
 		112222031DEA623A00626398 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112222021DEA623A00626398 /* AssetsLibrary.framework */; };
 		112222051DEA624200626398 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112222041DEA624200626398 /* CoreVideo.framework */; };
 		112222071DEA624A00626398 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112222061DEA624A00626398 /* QuartzCore.framework */; };
-		6C371E761DE94E0B00ADC776 /* main_on_images.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C371E751DE94E0B00ADC776 /* main_on_images.cpp */; };
 		6C371EB41DE94EA000ADC776 /* Frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C371E941DE94EA000ADC776 /* Frame.cpp */; };
 		6C371EB51DE94EA000ADC776 /* FrameMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C371E961DE94EA000ADC776 /* FrameMemory.cpp */; };
 		6C371EB61DE94EA000ADC776 /* FramePoseStruct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C371E981DE94EA000ADC776 /* FramePoseStruct.cpp */; };
@@ -96,7 +95,6 @@
 		112222041DEA624200626398 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		112222061DEA624A00626398 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		11CF05D11DF6596E00B5F25D /* MobileLSD.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = MobileLSD.profdata; sourceTree = "<group>"; };
-		6C371E751DE94E0B00ADC776 /* main_on_images.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_on_images.cpp; sourceTree = "<group>"; };
 		6C371E941DE94EA000ADC776 /* Frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Frame.cpp; sourceTree = "<group>"; };
 		6C371E951DE94EA000ADC776 /* Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
 		6C371E961DE94EA000ADC776 /* FrameMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameMemory.cpp; sourceTree = "<group>"; };
@@ -1246,7 +1244,6 @@
 				6C4475A21DE7A1E400316B64 /* AppDelegate.h */,
 				6C4475A31DE7A1E400316B64 /* AppDelegate.m */,
 				6C4475A51DE7A1E400316B64 /* ViewController.h */,
-				6C371E751DE94E0B00ADC776 /* main_on_images.cpp */,
 				6C3721C11DE9528800ADC776 /* SlamSystem.cpp */,
 				6C3721C21DE9528800ADC776 /* SlamSystem.h */,
 				6C4475A61DE7A1E400316B64 /* ViewController.mm */,
@@ -1348,12 +1345,12 @@
 		6C4475941DE7A1E400316B64 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Guanhang Wu";
 				TargetAttributes = {
 					6C44759B1DE7A1E400316B64 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = F22XVYAXE6;
+						DevelopmentTeam = 6GK264QP57;
 					};
 					6C4475B41DE7A1E400316B64 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1452,7 +1449,6 @@
 				6C371EB71DE94EA000ADC776 /* DepthMap.cpp in Sources */,
 				6C4475A71DE7A1E400316B64 /* ViewController.mm in Sources */,
 				6C371EBE1DE94EA000ADC776 /* settings.cpp in Sources */,
-				6C371E761DE94E0B00ADC776 /* main_on_images.cpp in Sources */,
 				6C371EB91DE94EA000ADC776 /* Relocalizer.cpp in Sources */,
 				6C4475A41DE7A1E400316B64 /* AppDelegate.m in Sources */,
 				6C371EB41DE94EA000ADC776 /* Frame.cpp in Sources */,
@@ -1529,13 +1525,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1574,13 +1580,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
